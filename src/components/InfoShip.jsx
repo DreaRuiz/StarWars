@@ -1,6 +1,6 @@
 // IMPORTS
 import React, { useContext } from "react";
-import { TextPrimary, TextSecondary } from "../styles/Styled";
+import { TextPrimary, TextSecondary, ImageShip } from "../styles/Styled";
 /* import { ImageShip } from "../styles/Styled"; */
 import { ShipContext } from "../context/ShipContext";
 import { useParams } from "react-router-dom";
@@ -13,7 +13,6 @@ import { useParams } from "react-router-dom";
 export const InfoShip = (ship) => {
   // PORTA LES DADES DEL CONTEXT
   const Ships = useContext(ShipContext);
-  console.log("Ship", Ships);
 
   // GUARDA EL NOM DE LA NAU CLICADA
   const currentShipName = useParams().shipName;
@@ -21,18 +20,19 @@ export const InfoShip = (ship) => {
   // TROBA LA NAU A MOSTRAR (PEL EL NOM)
 
   const currentShip = Ships.find((ship) => currentShipName === ship.name);
-  console.log("CURRENT SHIP", currentShip);
+  console.log("currentship", currentShip);
 
   // EXTREUREU L'ID PER MOSTRAR LA IMATGE
-  const id = Ships.map((e) => e.url.slice(32, -1));
+
+  const id = currentShip.url.slice(32, -1);
   const image = `https://starwars-visualguide.com/assets/img/starships/${id}.jpg`;
+  console.log("id", id);
 
   return (
     <>
       <h3>{currentShip.name}</h3>
 
-      {/*   <ImageShip>{`https://starwars-visualguide.com/assets/img/starships/${ship.url.slice(32, -1)}.jpg`}</ImageShip>
-        <ImageShip>{`https://starwars-visualguide.com/assets/img/starships/${numUrlShip}.jpg`}</ImageShip> */}
+      <img src={image} alt="ship image" />
 
       <TextPrimary>
         <p>Model: {currentShip.model}</p>
