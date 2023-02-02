@@ -3,6 +3,7 @@
   font-size: 16px;
   line-height: 24px;
   justify-content: center;
+  align-items: center;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -18,8 +19,6 @@
 body {
   margin: auto;
   display: flex;
-  align-items: center;
-  justify-content: center;
   color: rgba(255, 255, 255, 0.87);
   background-color: #0a0b0b;
 }
@@ -27,26 +26,37 @@ body {
   margin-top: 5%;
   width: 18%;
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  text-decoration: none;
 }
 .starshipName{
-  font-family: 'Arial';
+  font-family: 'Verdana';
   font-weight:700;
+  text-decoration: none;
+  color: white;
+  list-style: none;
+  display: "flex";
+  flex-direction: column;
+  margin-top: 10px;
   
   }
-  .starshipModel{
-    font-family: 'Arial';
-    font-weight: 300;
-    margin-left: 1rem;
-  }
+.starshipModel{
+  font-family: 'Verdana';
+  font-weight: 300;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+  text-align: right;
 
+    }
+  
 button {
   border-radius: 8px;
   border: 1px solid transparent;

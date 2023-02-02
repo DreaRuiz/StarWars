@@ -3,18 +3,19 @@ import React from "react";
 import { useState, useEffect } from "react";
 import App from "../App";
 
-export const StarsContext = createContext();
+// LLISTAT DE NAUS (Crida a la API)
+export const ShipContext = createContext();
 
-export const StarsContextProvider = (props) => {
+export const ShipContextProvider = (props) => {
   const fetchFunction = () => {
     return fetch("https://swapi.dev/api/starships/").then((res) => res.json());
   };
-  const [startShips, setStartShips] = useState([]);
+  const [Ships, setShips] = useState([]);
 
   useEffect(() => {
     fetchFunction()
       .then((res) => {
-        setStartShips(res.results);
+        setShips(res.results);
       })
 
       .catch((error) => {
@@ -23,8 +24,8 @@ export const StarsContextProvider = (props) => {
   }, []);
 
   return (
-    <StarsContext.Provider value={startShips}>
+    <ShipContext.Provider value={Ships}>
       <App />
-    </StarsContext.Provider>
+    </ShipContext.Provider>
   );
 };
