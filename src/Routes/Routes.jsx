@@ -1,12 +1,12 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { ShipList } from "../components/ShipList";
-import { InfoShip } from "../components/InfoShip";
+import { Home } from "../pages/Home";
+import { InfoShip } from "../pages/InfoShip";
 
 const Router = () => (
   <BrowserRouter>
     <Routes>
-      <Route index element={<ShipList />} />
-      <Route path="/InfoShip/:shipName" element={<InfoShip />} />
+      <Route index element={<Home />} />
+      <Route path="/CardShip/:shipName" element={<InfoShip />} />
     </Routes>
   </BrowserRouter>
 );

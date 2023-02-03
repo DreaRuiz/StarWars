@@ -58,3 +58,17 @@ export const ImageShip = styled.img`
   display: flex;
   gap: 1.5rem;
 `;
+
+export const BoxCardShip = styled.div`
+  background-color: #151515;
+  border-radius: 0.2rem;
+  margin: 2px;
+  display: flex;
+  justify-content: center;
+  padding-left: 1rem;
+  align-items: center;
+  height: 60%;
+  width: auto;
+  flex-direction: column;
+  margin: 50px;
+`;
