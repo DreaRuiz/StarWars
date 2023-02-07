@@ -29,8 +29,9 @@ export function ShipListConstructor() {
         // Al clicar guarda el nom de la nau amb la funció saveName
         <Link to={"/CardShip/" + ship.name} key={ship.name} >
           <BoxStarShips onClick={() => saveName(ship.name)} key={ship.name}>
-            <p className="starshipName"> {ship.name.toUpperCase()} </p>
-            <p className="starshipModel"> {ship.model} </p>
+            <ul className="starshipName"> {ship.name.toUpperCase()} </ul>
+     
+            <ul className="starshipModel"> {ship.model} </ul>
           </BoxStarShips>
         </Link>
       ))}

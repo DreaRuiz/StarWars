@@ -1,11 +1,11 @@
+
 :root {
   font-family: 'Jura', sans-serif;
   font-size: 16px;
   line-height: 24px;
   justify-content: center;
   align-items: center;
-
-  color-scheme: light dark;
+  display: "flex";
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
 
@@ -14,20 +14,25 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  
 }
-
 body {
   margin: auto;
   display: flex;
   color: rgba(255, 255, 255, 0.87);
   background-color: #0a0b0b;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
 }
 
 /* Header */
 .logo{
-  margin-left: 19rem;
-  margin-top: 3rem;
-  width: 18%;
+  margin-left: 42%;
+  margin-top: 2rem;
+  margin-top: 30px;
+  width: 14%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -38,56 +43,60 @@ body {
   margin-left: 54rem;
   margin-top: -2rem;
   flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
 }
 
 .line{
-  margin-top: 3rem;
-  border-top: 1px solid white;
-  width: 100vh;
   display: flex;
   flex-direction: row;
-  border-bottom: 0.25px solid white;
+  border-bottom: 0.1px solid rgb(133, 133, 133);
   justify-content: center;
   align-items: center;
+  padding-top: 10px;
+
 }
 .nav{
-  margin-left: 1rem;
   flex-direction: row;
   align-items: center;
+  text-decoration: none;
+  color: rgb(211, 211, 211);
+  font-weight: 600;
+  padding: 20px;
 }
 
-
-
-/* Card */
+/* List */
 .starshipName{
   font-family: 'Verdana';
-  font-weight:700;
+  font-weight: 600;
   text-decoration: none;
   color: white;
-  list-style: none;
-  display: "flex";
-  flex-direction: column;
-  margin-top: 10px;
-  
-  }
+  text-align: left;  
+}
+
 .starshipModel{
   font-family: 'Verdana';
-  font-weight: 300;
+  font-weight: 200;
   text-decoration: none;
   color: white;
+  text-align: left;
   display: flex;
-  flex-direction: row;
-  margin-top: 30px;
-  text-align: right;
+  margin-top: -15px;
+}
 
-    }
-
+/* Welcome */
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
   text-decoration: none;
-
 }
+p {
+  text-decoration: none;
+}
+
+
 
 
 @media (prefers-color-scheme: light) {
@@ -96,7 +105,7 @@ h1 {
     background-color: #ffffff;
   }
   a:hover {
-    color: #747bff;
+    color: white;
   }
   button {
     background-color: #f9f9f9;
