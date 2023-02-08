@@ -15,6 +15,7 @@ export const CardShip = () => {
 
   // GUARDA EL NOM DE LA NAU CLICADA
   const currentShipName = useParams().shipName;
+  console.log("currentShipName", currentShipName)
 
   // TROBA LA NAU A MOSTRAR (PEL EL NOM)
   const currentShip = Ships.find((ship) => currentShipName === ship.name);
