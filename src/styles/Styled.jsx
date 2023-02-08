@@ -96,8 +96,18 @@ flex-direction: row;
 export const Button = styled.button`
   background: transparent;
   border-radius: 3px;
-  border: 2px solid #86c8bc;
-  color: #b1b2ff;
+  border: 2px solid white;
+  color: white;
   margin: 0.5em 1em;
   padding: 0.25em 1em;
   `
+
+  export const Input = styled.input`
+  border: 1px solid white;
+  width: 300px;
+  border-radius: 4px;
+  display: flex;
+  margin: auto;
+  margin-bottom: 10px;
+  flexdirection: column;
+`;

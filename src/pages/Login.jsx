@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 import { Link, useNavigate } from "react-router-dom";
-import { Button } from "../styles/Styled";
+import { Button, Input } from "../styles/Styled";
 // Components de Firebase
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../config/firebase";
@@ -40,14 +40,14 @@ export const Login = () => {
         <h2>Enter your email adress</h2>
         <form>
           <div>
-            <input
+            <Input
               type="email"
               placeholder="Enter email"
               autoComplete="on"
               required
               onChange={(e) => setEmail(e.target.value)}
             />
-            <input
+            <Input
               type="password"
               placeholder="Enter password"
               minLength="6"
@@ -61,7 +61,7 @@ export const Login = () => {
           </Button>
           <p>
             Don’t have an account yet?
-            <Link to="/register/"> Sign up </Link>
+            <Link  className="link" to="/register/"> Sign up </Link>
           </p>
         </form>
       </div>
