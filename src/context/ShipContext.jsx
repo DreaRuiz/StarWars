@@ -37,7 +37,6 @@ export const ShipContextProvider = (props) => {
   return (
     <ShipContext.Provider value={Ships}>
       <App />
-      <Button onClick={() => sumPage()}> View more </Button>
     </ShipContext.Provider>
   );
 };
